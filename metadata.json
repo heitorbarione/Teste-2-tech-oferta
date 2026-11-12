@@ -1,0 +1,6 @@
+{
+  "name": "Tech Oferta - Ofertas e Promoções de Tecnologia no Mercado Livre",
+  "description": "Portal Tech Oferta: As melhores ofertas, promoções e descontos em eletrônicos, celulares, notebooks e games com links de afiliados do Mercado Livre.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
