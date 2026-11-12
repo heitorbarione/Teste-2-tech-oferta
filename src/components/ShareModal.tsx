@@ -24,12 +24,12 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, product
 
   if (!isOpen) return null;
 
-  // Determine URL to share
-  // If in production/preview, use the current origin or public URL
-  const baseUrl = window.location.origin;
+  // Determine URL to share (preserves subpath on GitHub Pages like /repo-name/)
+  const cleanPath = window.location.pathname.replace(/\/index\.html$/, '').replace(/\/+$/, '');
+  const baseUrl = `${window.location.origin}${cleanPath}`;
   const shareUrl = product 
     ? `${baseUrl}/#produto-${product.id}`
-    : baseUrl;
+    : `${baseUrl}/`;
 
   // Format message for WhatsApp / Telegram
   let formattedMessage = '';

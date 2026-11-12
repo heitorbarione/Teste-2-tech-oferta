@@ -46,6 +46,21 @@
   <body class="bg-[#0a0a0c] text-zinc-100 antialiased selection:bg-amber-400 selection:text-black">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      setTimeout(function () {
+        if (!window.__TECH_OFERTA_MOUNTED__) {
+          var root = document.getElementById('root');
+          if (root && !root.hasChildNodes()) {
+            root.innerHTML =
+              '<div style="min-height:100vh;background:#0a0a0c;color:#f4f4f5;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;font-family:sans-serif;text-align:center;">' +
+              '<div style="background:#facc15;color:#09090b;font-weight:900;padding:4px 12px;border-radius:6px;font-size:12px;margin-bottom:16px;">TECH OFERTA</div>' +
+              '<h2 style="margin:0 0 8px;font-size:20px;">Portal precisa ser compilado para publicar no GitHub Pages</h2>' +
+              '<p style="color:#a1a1aa;font-size:13px;max-width:500px;line-height:1.5;">No seu repositório do GitHub, acesse <b>Settings → Pages</b> e em <b>Build and deployment → Source</b> selecione <b>GitHub Actions</b> (o arquivo <code>.github/workflows/deploy.yml</code> já está pronto para compilar e publicar automaticamente).</p>' +
+              '</div>';
+          }
+        }
+      }, 2500);
+    </script>
   </body>
 </html>
 
